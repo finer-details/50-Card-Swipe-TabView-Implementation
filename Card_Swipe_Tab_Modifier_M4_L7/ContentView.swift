@@ -11,6 +11,25 @@ struct ContentView: View {
     
     @State var number = 1
     
+    @ObservedObject var array = ArrayLogic()
+  
+//    @State var circleIsFill = false
+    
+    private func randomElementCircle() -> String {
+        let collection = array.circleTypeArray
+        return collection[Int.random(in: 0..<collection.count)]
+    }
+    
+//    private func circleType() -> Bool {
+//            if randomElementCircle() == "circle.fill" {
+//                circleIsFill = true
+//            } else if randomElementCircle() != "circle.fill" {
+//                circleIsFill = false
+//            }
+//        return circleIsFill
+//    }
+    
+    
     var body: some View {
         
         GeometryReader { geo in
@@ -29,10 +48,15 @@ struct ContentView: View {
                             .foregroundColor(Color(.sRGB, red: (Double.random(in: 0..<1)), green: (Double.random(in: 0..<1)), blue: (Double.random(in: 0..<1)), opacity: 1))
                         
                         ZStack {
-                           Image(systemName: "circle")
+                            //creates a random circle boarder
+                            Image(systemName: randomElementCircle())
                                 .font(.custom("Avenir-Book", size: 330, relativeTo: .body))
+
                             Text("\(number)")
                                 .font(.custom("ArialRoundedMTBold", size: 200, relativeTo: .largeTitle))
+                            //makes white font color if circle.fill selected
+//                                .foregroundColor( circleType() ? .white : .black)
+                                .foregroundColor(.white)
                         }
                             .padding()
                     }
@@ -42,6 +66,10 @@ struct ContentView: View {
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
         }
     }
+    
+    
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

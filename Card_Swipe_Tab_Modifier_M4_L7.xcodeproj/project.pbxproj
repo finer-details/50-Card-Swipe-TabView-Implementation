@@ -11,6 +11,7 @@
 		F280C93A289BC3240047A744 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280C939289BC3240047A744 /* ContentView.swift */; };
 		F280C93C289BC3260047A744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F280C93B289BC3260047A744 /* Assets.xcassets */; };
 		F280C93F289BC3260047A744 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F280C93E289BC3260047A744 /* Preview Assets.xcassets */; };
+		F280C946289BD88E0047A744 /* ArrayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F280C945289BD88E0047A744 /* ArrayLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F280C939289BC3240047A744 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F280C93B289BC3260047A744 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F280C93E289BC3260047A744 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F280C945289BD88E0047A744 /* ArrayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				F280C937289BC3240047A744 /* Card_Swipe_Tab_Modifier_M4_L7App.swift */,
 				F280C939289BC3240047A744 /* ContentView.swift */,
+				F280C945289BD88E0047A744 /* ArrayLogic.swift */,
 				F280C93B289BC3260047A744 /* Assets.xcassets */,
 				F280C93D289BC3260047A744 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F280C93A289BC3240047A744 /* ContentView.swift in Sources */,
+				F280C946289BD88E0047A744 /* ArrayLogic.swift in Sources */,
 				F280C938289BC3240047A744 /* Card_Swipe_Tab_Modifier_M4_L7App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
