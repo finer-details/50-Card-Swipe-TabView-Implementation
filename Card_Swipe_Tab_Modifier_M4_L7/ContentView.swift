@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var number = 1
+    
     var body: some View {
         
         GeometryReader { geo in
             
-            TabView {
+            TabView(selection: $number) {
                 
-                ForEach (1..<51) { index in
+                ForEach (1..<52) { index in
                     
                     ZStack {
                         Rectangle()
@@ -25,7 +28,12 @@ struct ContentView: View {
                         //Generate a new colour with each swipe
                             .foregroundColor(Color(.sRGB, red: (Double.random(in: 0..<1)), green: (Double.random(in: 0..<1)), blue: (Double.random(in: 0..<1)), opacity: 1))
                         
-                        Text("Starter Project")
+                        ZStack {
+                           Image(systemName: "circle")
+                                .font(.custom("Avenir-Book", size: 330, relativeTo: .body))
+                            Text("\(number)")
+                                .font(.custom("ArialRoundedMTBold", size: 200, relativeTo: .largeTitle))
+                        }
                             .padding()
                     }
                 }
